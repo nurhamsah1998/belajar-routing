@@ -4,13 +4,15 @@ import About from "./About";
 import AboutOne from "./AboutOne";
 import Home from "./Home";
 import Layout from "./Layout";
+import Login from "./Login";
 import Notfount from "./Notfount";
 
 function App() {
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/home" />} />
       <Route
-        path="/belajar-router"
+        path="/"
         element={<Layout />}
         children={
           <React.Fragment>
@@ -21,8 +23,9 @@ function App() {
         }
       />
       <Route path="alamat-tidak-ditemukan" element={<Notfount />} />
+      <Route path="login" element={<Login />} />
       <Route path="*" element={<Navigate to="/alamat-tidak-ditemukan" />} />
-      <Route path="/" element={<Navigate to="/belajar-router/home" />} />
+
     </Routes>
   );
 }

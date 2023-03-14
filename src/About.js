@@ -1,7 +1,7 @@
 import React from "react";
 
 function About() {
-  return <div>ini adalah page About</div>;
+  return <div>This is About Page</div>;
 }
 
 export default About;

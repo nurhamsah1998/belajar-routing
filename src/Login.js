@@ -3,6 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 function Notfount() {
   const url = useNavigate();
+  React.useEffect(() => {
+    if (localStorage.getItem("token")) {
+      url("/");
+    }
+  }, []);
   return (
     <div
       style={{
@@ -13,8 +18,15 @@ function Notfount() {
       }}
     >
       <div>
-        <h2>Oops, Error 404</h2>
-        <button onClick={() => url("/")}>Go to Home</button>
+        <h2>Login Page</h2>
+        <button
+          onClick={() => {
+            localStorage.setItem("token", "This User Token");
+            url(0);
+          }}
+        >
+          Login
+        </button>
       </div>
     </div>
   );
