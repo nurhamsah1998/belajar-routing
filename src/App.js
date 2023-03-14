@@ -22,10 +22,9 @@ function App() {
           </React.Fragment>
         }
       />
-      <Route path="alamat-tidak-ditemukan" element={<Notfount />} />
+      <Route path="not-found" element={<Notfount />} />
       <Route path="login" element={<Login />} />
-      <Route path="*" element={<Navigate to="/alamat-tidak-ditemukan" />} />
-
+      <Route path="*" element={<Navigate to="/not-found" />} />
     </Routes>
   );
 }
